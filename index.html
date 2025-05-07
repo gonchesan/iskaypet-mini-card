@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Import styles -->
+  <link rel="stylesheet" href="/src/style.scss">
+  <!-- Import fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <title>IskayPet - Mini card</title>
+</head>
+
+<body>
+
+  <article class="card">
+    <header class="card__aside">
+      <img class="card__img" src="https://i.pinimg.com/736x/3c/e4/fd/3ce4fd09ac934c334780a94c8c43a821.jpg" alt="pets" />
+    </header>
+    <div class="card__body">
+      <h2 class="card__title">A partir de 12 meses</h2>
+      <p class="card__description">Pienso especializado saludable</p>
+    </div>
+    <footer class="card__footer">
+      <button class="card__button--primary" id="btn-buy">¡Compra ahora!</button>
+    </footer>
+  </article>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+  const button = $('#btn-buy');
+  button.on("click", () => {
+    button.toggleClass("card__button--primary")
+    button.toggleClass("card__button--secondary")
+
+  })
+
+</script>
+
+</html>
